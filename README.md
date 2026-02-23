@@ -67,9 +67,9 @@ The Eumelos interface is designed to be **investor-ready** and **premium**. It f
 
 Eumelos.AI is built by a specialized team focused on redefining academic infrastructure.
 
-- **D D Gangadhar**: Frontend Engineering, UI & UX Design
-- **Pranav Adithya**: Backend Engineering (Spring Boot)
-- **Rushi Kiran**: API Architecture & Deployment
+- **D D Gangadhar(2400030058)**: Frontend Architecture, UI & UX Design, Deployment
+- **Pranav Adithya (2400030353)**: Backend Engineering (Spring Boot)
+- **Rushi Kiran(2400030748)**: API Architecture, Testing and Validating
 
 ---
 
