@@ -1,0 +1,198 @@
+.assignments-container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    background: var(--bg-primary);
+    transition: background-color var(--transition-standard);
+}
+
+.dot-decoration {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.dot-blue {
+    background: var(--accent-blue);
+}
+
+.dot-dim {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dot-pill {
+    width: 24px;
+    border-radius: 3px;
+    background: var(--accent-red);
+}
+
+[data-theme="light"] .dot-dim {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.assignments-main {
+    flex: 1;
+    padding: 60px 60px 60px calc(var(--sidebar-width) + 30px);
+    overflow-y: auto;
+}
+
+.assignments-content {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.assignments-header {
+    margin-bottom: 48px;
+}
+
+.assignments-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.assignments-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/* Light Theme Overrides */
+[data-theme="light"] .assignments-container {
+    background-color: #F8FAFC;
+}
+
+[data-theme="light"] .assignments-header h1 {
+    font-size: 48px;
+    color: #111827;
+}
+
+[data-theme="light"] .assignments-header p {
+    color: #6B7280;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+[data-theme="light"] .assignments-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    padding: 32px;
+    overflow: hidden;
+}
+
+[data-theme="light"] .assignments-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+[data-theme="light"] .assignments-table th {
+    padding: 16px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+[data-theme="light"] .assignments-table td {
+    padding: 24px 24px;
+    font-size: 15px;
+    color: #111827;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+[data-theme="light"] .assignments-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status Badges for Light Theme */
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+}
+
+[data-theme="light"] .badge-urgent {
+    background-color: #FEE2E2;
+    color: #B91C1C;
+}
+
+[data-theme="light"] .badge-upcoming {
+    background-color: #FEF3C7;
+    color: #B45309;
+}
+
+[data-theme="light"] .badge-submitted {
+    background-color: #DCFCE7;
+    color: #15803D;
+}
+
+/* Buttons for Light Theme */
+[data-theme="light"] .btn-submit {
+    background-color: #2563EB;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+[data-theme="light"] .btn-submit:hover {
+    background-color: #1D4ED8;
+    transform: translateY(-1px);
+}
+
+[data-theme="light"] .btn-view {
+    background-color: #FFFFFF;
+    color: #111827;
+    border: 1px solid #E5E7EB;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+[data-theme="light"] .btn-view:hover {
+    background-color: #F9FAFB;
+    border-color: #D1D5DB;
+}
+
+/* Dark Theme specific adjustments to keep it looking good */
+[data-theme="dark"] .assignments-card {
+    background: #0A0A0A;
+    border: 1px solid #141414;
+    border-radius: var(--radius-card);
+    padding: 0;
+}
+
+[data-theme="dark"] .assignments-table th {
+    padding: 20px 24px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-bottom: 1px solid #111;
+}
+
+[data-theme="dark"] .assignments-table td {
+    padding: 20px 24px;
+    border-bottom: 1px solid #0a0a0a;
+}

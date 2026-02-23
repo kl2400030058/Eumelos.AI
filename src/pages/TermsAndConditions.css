@@ -1,0 +1,29 @@
+.terms-wrapper {
+    min-height: 100vh;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.terms-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.terms-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.terms-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+}
+
+.terms-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.terms-wrapper .glass-panel {
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: rgba(5, 5, 5, 0.4);
+    backdrop-filter: blur(20px);
+}

@@ -1,0 +1,89 @@
+.fluid-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: transparent;
+    pointer-events: none;
+}
+
+[data-theme="dark"] .fluid-background-container {
+    backdrop-filter: blur(5px);
+}
+
+.fluid-blob {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+    animation: flow 20s infinite alternate cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+[data-theme="light"] .fluid-blob {
+    opacity: 0.08;
+    filter: blur(120px);
+}
+
+.blob-1 {
+    background: radial-gradient(circle, var(--accent-blue) 0%, transparent 70%);
+    top: -10%;
+    left: -10%;
+    animation-duration: 25s;
+}
+
+.blob-2 {
+    background: radial-gradient(circle, #6366f1 0%, transparent 70%);
+    bottom: -10%;
+    right: -10%;
+    animation-delay: -5s;
+    animation-duration: 30s;
+}
+
+.blob-3 {
+    background: radial-gradient(circle, var(--accent-red) 0%, transparent 70%);
+    top: 40%;
+    left: 40%;
+    width: 40vw;
+    height: 40vw;
+    opacity: 0.1;
+    animation-duration: 20s;
+    animation-delay: -10s;
+}
+
+.fluid-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
+}
+
+[data-theme="light"] .fluid-overlay {
+    background: radial-gradient(circle at center, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+@keyframes flow {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    33% {
+        transform: translate(10%, 10%) scale(1.1) rotate(120deg);
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 40%;
+    }
+
+    66% {
+        transform: translate(-5%, 15%) scale(0.9) rotate(240deg);
+        border-radius: 70% 30% 40% 60% / 30% 70% 60% 40%;
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1) rotate(360deg);
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}

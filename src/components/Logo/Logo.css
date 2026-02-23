@@ -1,0 +1,39 @@
+.eumelos-logo-sphere {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+    transition: transform var(--transition-standard);
+}
+
+.eumelos-logo-sphere:hover {
+    transform: scale(1.05);
+}
+
+.logo-text-e {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 900;
+    font-size: 44px;
+    fill: white;
+    letter-spacing: -0.05em;
+    filter: drop-shadow(0 0 8px var(--accent-blue));
+}
+
+[data-theme="light"] .logo-text-e {
+    fill: var(--accent-blue);
+    filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.3));
+}
+
+[data-theme="light"] #sphereGradient stop:first-child {
+    stop-color: white;
+    stop-opacity: 1;
+}
+
+[data-theme="light"] #sphereGradient stop:last-child {
+    stop-color: #f1f5f9;
+}
+
+[data-theme="light"] .eumelos-logo-sphere circle:nth-of-type(2) {
+    stroke: #e2e8f0;
+}
